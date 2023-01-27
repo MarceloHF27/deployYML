@@ -1,0 +1,44 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: '2023-01-27T17:59:14Z'
+  generation: 6
+  labels:
+    app: gitlab
+  managedFields:
+    - apiVersion: networking.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+        f:spec:
+          f:ingressClassName: {}
+          f:rules: {}
+          f:tls: {}
+      manager: rancher
+      operation: Update
+      time: '2023-01-27T18:24:19Z'
+  name: gitlab-ingress
+  namespace: gitlab
+  resourceVersion: '1324208'
+  uid: 136879aa-4147-410b-8422-93df1b994430
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: gitlab-mercur.com.br
+      http:
+        paths:
+          - backend:
+              service:
+                name: gitlab-nodeport
+                port:
+                  number: 80
+            pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - gitlab-mercur.com.br
+      secretName: tls-rancher-ingress
+status:
+  loadBalancer: {}
