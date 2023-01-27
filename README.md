@@ -28,6 +28,6 @@ Gitlab on Rancher
 -> Ajustar limite de cpu e memória
 
 ## Criar o Ingress
--> validar as configurações no [https://github.com/MarceloHF27/deployYML/blob/main/ingress-gitlab.yml](#ingress-gitlab)
-    -TLS e specs
--> criar portas 80 e 443
+-> validar as configurações TLS e specs no [#ingress-gitlab](https://github.com/MarceloHF27/deployYML/blob/main/ingress-gitlab.yml)
+
+-> criar as portas 80 e 443
