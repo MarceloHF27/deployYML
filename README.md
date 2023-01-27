@@ -28,5 +28,6 @@ Selecionar o storageClass criado
 -> Ajustar limite de cpu e memória
 
 #Criar o Ingress
--> validar as configurações no 
+-> validar as configurações no [https://github.com/MarceloHF27/deployYML/blob/main/ingress-gitlab.yml](#ingress-gitlab)
+    TLS e specs
 -> criar portas 80 e 443
